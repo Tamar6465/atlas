@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlas</title>
+
+  <script src="script.js" type="module" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<style>
+  body{
+    background: url("https://images.pexels.com/photos/346696/pexels-photo-346696.jpeg");
+  background-size: cover;
+  }
+  .country{
+    background-color: rgb(253, 253, 253,0.7);
+  }
+  header  a:hover {
+    color: #e2333f;
+    text-decoration: none;
+}
+
+header  a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0%;
+    background: #F68989;
+    background: -moz-linear-gradient(left, #f16262 0%, #da4d56 100%);
+    background: -webkit-linear-gradient(left, #f16262 0%, #da4d56 100%);
+    background: linear-gradient(to right, #f16262 0%, #da4d56 100%);
+    transition: 1000ms;
+    margin: 0 auto;
+}
+
+/* במעבר עכבר יציג את הקו מתחת ללינק */
+header   a:hover::after {
+    width: 100%;
+}
+</style>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-opacity-75">
+      <div class="container-fluid">
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button> -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link " id="home" href="#"><i class="fa fa-globe" aria-hidden="true"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " id="ALL" href="#">ALL</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="ISRAEL" href="#">ISRAEL</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="FRANCE" href="#">FRANCE</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="USA" href="#">USA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="GB" href="#">GB</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="THAILAND" href="#">THAILAND</a>
+            </li>
+            <li>
+              <select class="form-select select" aria-label="Default select example">
+              </select>
+            </li>
+          </ul>
+        </div>
+
+        <form class="d-flex" role="search">
+          <input class="form-control me-2 inputSearch" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success btnSearch" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+  </header>
+  <div class="container  ">
+    <div class="d-flex justify-content-around mt-5 flex-wrap " id="content"></div>
+  </div>
+</body>
+
+</html>
